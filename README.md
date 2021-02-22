@@ -6,6 +6,8 @@
 
 ## About :books:
 
+The other day, I wanted to compute a number of values for a function formula. I wondered how I could implement a function that handles cubes, squares and linear functions fed into a function as a string and produce a list of values as Ys from a given list of Xs. *Funk Off* is that library. It supports linear functions, quadratic functions and cubic functions!
+
 ## Installation :inbox_tray:
 
 ### Adding to your project
