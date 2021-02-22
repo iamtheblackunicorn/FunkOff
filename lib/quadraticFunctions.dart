@@ -1,6 +1,8 @@
 import 'coreEngine.dart';
 import 'dart:math';
 
+/// Computes Y from a given X and function formula
+/// and returns it as a double for quadratic functions.
 double computeQuadratic(String formula, double value) {
   double result = 0;
   if (astParser(formula) == 'QUADRATIC_FUNCTION') {
@@ -14,6 +16,8 @@ double computeQuadratic(String formula, double value) {
   return result;
 }
 
+/// Computes Ys from a given Xs and function formula
+/// and returns it as a List of doubles for quadratic functions.
 List<double> computeQuadraticSet(String formula, List<double> values) {
   List<double> results = [];
   for (int i = 0; i < values.length; i++) {
@@ -23,7 +27,8 @@ List<double> computeQuadraticSet(String formula, List<double> values) {
   return results;
 }
 
-void testQuadratic() {
+/// Tests the above methods for quadratic functions.
+void testQuadratics() {
   String testFormulaQuadratic = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
   List<double> testSet = [4.5, 4.6, 4.7, 4.8];
   print(patternParser(testFormulaQuadratic));

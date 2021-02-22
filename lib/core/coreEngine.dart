@@ -1,3 +1,6 @@
+/// This method returns the
+/// lexing patterns needed
+/// for matching formulas.
 Map<String, dynamic> enginePatterns() {
   Map<String, dynamic> patterns = {
     'NUMBER': RegExp(r'[0-9]+\.[0-9]+'),
@@ -12,6 +15,9 @@ Map<String, dynamic> enginePatterns() {
   return patterns;
 }
 
+/// This method returns the
+/// AST patterns needed
+/// for matching formulas.
 Map<String, dynamic> engineAST() {
   Map<String, dynamic> ast = {
     'LINEAR_FUNCTION':
@@ -24,7 +30,8 @@ Map<String, dynamic> engineAST() {
   return ast;
 }
 
-Map<String, dynamic> cosometicStatements() {
+/// Returns a map of the non-essential parser elements.
+Map<String, dynamic> cosmeticStatements() {
   Map<String, dynamic> cosmetics = {
     'PLUS': RegExp(r'\+'),
     'MINUS': RegExp(r'\-'),
@@ -37,6 +44,8 @@ Map<String, dynamic> cosometicStatements() {
   return cosmetics;
 }
 
+/// Generates a list of the schema [TOKEN_TYPE, TOKEN]
+/// and returns it.
 List<dynamic> patternParser(String formula) {
   Map<String, dynamic> patterns = enginePatterns();
   List<dynamic> resultList = [];
@@ -54,6 +63,7 @@ List<dynamic> patternParser(String formula) {
   return resultList;
 }
 
+/// Returns which type of function is being fed in as a string.
 String astParser(String formula) {
   Map<String, dynamic> ast = engineAST();
   List<dynamic> parsedTokens = patternParser(formula);
@@ -72,6 +82,8 @@ String astParser(String formula) {
   return result;
 }
 
+/// Returns a Boolean value of whether
+/// the formula fed-in, is valid.
 bool statementLinter(String formula) {
   bool result = false;
   if (astParser(formula) != 'NONE') {
@@ -80,11 +92,13 @@ bool statementLinter(String formula) {
   return result;
 }
 
+/// Returns a list of double values,
+/// containing, a,b, and c, if present.
 List<double> irParser(String formula) {
   List<double> result = [];
   if (astParser(formula) != 'NONE') {
     List<dynamic> parsedTokens = patternParser(formula);
-    Map<String, dynamic> cosmetics = cosometicStatements();
+    Map<String, dynamic> cosmetics = cosmeticStatements();
     for (int i = 0; i < parsedTokens.length; i++) {
       for (int x = 0; x < cosmetics.length; x++) {
         String key = cosmetics.keys.elementAt(x);
@@ -102,6 +116,8 @@ List<double> irParser(String formula) {
   return result;
 }
 
+/// This function logs a visual tree of the
+/// formula to the console.
 void makeVisualTree(String formula) {
   String spaces = '   ';
   print('\n');

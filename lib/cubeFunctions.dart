@@ -1,6 +1,8 @@
-import 'coreEngine.dart';
+import 'core/coreEngine.dart';
 import 'dart:math';
 
+/// Computes Y from a given X and function formula
+/// and returns it as a double for cubic functions.
 double computeCube(String formula, double value) {
   double result = 0;
   if (astParser(formula) == 'CUBE_FUNCTION') {
@@ -16,6 +18,8 @@ double computeCube(String formula, double value) {
   return result;
 }
 
+/// Computes Ys from a given Xs and function formula
+/// and returns it as a List of doubles for cubic functions.
 List<double> computeCubeSet(String formula, List<double> values) {
   List<double> results = [];
   for (int i = 0; i < values.length; i++) {
@@ -25,6 +29,7 @@ List<double> computeCubeSet(String formula, List<double> values) {
   return results;
 }
 
+/// Tests the above methods for cubic functions.
 void testCubes() {
   String testFormulaCube =
       '300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )';
@@ -34,8 +39,4 @@ void testCubes() {
   print(irParser(testFormulaCube));
   print(computeCube(testFormulaCube, 2));
   print(computeCubeSet(testFormulaCube, testSet));
-}
-
-void main() {
-  testCubes();
 }
