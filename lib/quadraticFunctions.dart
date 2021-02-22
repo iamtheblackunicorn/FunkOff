@@ -37,7 +37,3 @@ void testQuadratics() {
   print(computeQuadratic(testFormulaQuadratic, 2));
   print(computeQuadraticSet(testFormulaQuadratic, testSet));
 }
-
-void main() {
-  testQuadratic();
-}

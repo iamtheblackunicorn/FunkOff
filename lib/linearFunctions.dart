@@ -1,5 +1,5 @@
 import 'funkoff.dart';
-import 'dart:math';
+
 /// Computes Y from a given X and function formula
 /// and returns it as a double for linear functions.
 double computeLinear(String formula, double value) {
