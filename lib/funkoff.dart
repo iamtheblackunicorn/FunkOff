@@ -135,13 +135,10 @@ void makeVisualTree(String formula) {
   print('\n');
 }
 
+/// Tests the functions above.
 void testEngine() {
   String formula = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
   makeVisualTree(formula);
   print(patternParser(formula));
   print(astParser(formula));
-}
-
-void main() {
-  testEngine();
 }

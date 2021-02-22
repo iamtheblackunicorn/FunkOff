@@ -23,7 +23,7 @@ FUNK OFF by Alexander Abraham a.k.a. "The Black Unicorn".
 Licensed under the MIT license.
 */
 
-import 'package:funkoff/core/coreEngine.dart'; // If you want to use the engine itself, use this!
+import 'package:funkoff/funkoff.dart'; // If you want to use the engine itself, use this!
 import 'package:funkoff/linearFunctions.dart'; // If you want to use linear functions, import this!
 import 'package:funkoff/quadraticFunctions.dart'; // If you want to use quadratic functions, import this!
 import 'package:funkoff/cubeFunctions.dart'; // If you want to use cube functions, import this!
@@ -54,18 +54,17 @@ void main(){
   print(irParser(cubeFunction));
   makeVisualTree(cubeFunction);
 
-  print(computeLinear(linearFormula,testX));
-  print(computeQuadratic(quadraticFormula,testX));
-  print(computeCube(cubeFormula,testX));
+  print(computeLinear(linearFunction,testX));
+  print(computeQuadratic(quadraticFunction,testX));
+  print(computeCube(cubeFunction,testX));
 
-  print(computeLinearSet(linearFormula,testSet));
-  print(computeQuadraticSet(quadraticFormula,testSet));
-  print(computeCubeSet(cubeFormula,testSet));
+  print(computeLinearSet(linearFunction,testSet));
+  print(computeQuadraticSet(quadraticFunction,testSet));
+  print(computeCubeSet(cubeFunction,testSet));
 
   testEngine();
   testCubes();
   testQuadratics();
   testLinears();
 }
-
 ```
