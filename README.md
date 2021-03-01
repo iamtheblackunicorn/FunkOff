@@ -69,7 +69,7 @@ This method returns the AST patterns needed for matching formulas.
 Returns a map of the non-essential parser elements.
 
 ##### List<dynamic> patternParser(String formula)
-Generates a list of the schema [TOKEN_TYPE, TOKEN] and returns it.
+Generates a list of the schema `TOKEN_TYPE, TOKEN and returns it.
 
 ##### String astParser(String formula)
 Returns which type of function is being fed in as a string.
