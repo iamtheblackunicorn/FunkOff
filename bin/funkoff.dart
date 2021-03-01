@@ -1,10 +1,9 @@
 import 'package:funkoff/funkoff.dart';
 
 void main(List<String> arguments) {
-  if (arguments[0] == 'shell'){
+  if (arguments[0] == 'shell') {
     functionsShell();
-  }
-  else {
+  } else {
     try {
       evaluateScript(arguments[0]);
     } catch (e) {

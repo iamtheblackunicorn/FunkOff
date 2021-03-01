@@ -59,17 +59,16 @@ void functionsShell() {
 }
 
 /// This function processes a script with the ending *.fs.
-void evaluateScript(String fileName){
+void evaluateScript(String fileName) {
   RegExp fileRegex = RegExp(r'.*\.fs');
-  if (fileRegex.hasMatch(fileName) == true){
+  if (fileRegex.hasMatch(fileName) == true) {
     List<String> contentList = File(fileName).readAsStringSync().split('\n');
-    for (int i = 0; i < contentList.length; i++){
+    for (int i = 0; i < contentList.length; i++) {
       print(evaluateIO(contentList[i]));
     }
   } else {
     print('No valid file supplied!');
   }
-
 }
 
 /// Tests all of the above!
