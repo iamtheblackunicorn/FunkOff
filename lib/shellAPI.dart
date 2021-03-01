@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'coreEngine.dart';
 import 'cubeFunctions.dart';
 import 'quadraticFunctions.dart';
 import 'linearFunctions.dart';

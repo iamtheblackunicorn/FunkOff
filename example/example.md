@@ -25,6 +25,7 @@ Licensed under the MIT license.
 
 import 'package:funkoff/funkoff.dart'; // If you want to use the engine itself, use this!
 
+void main(){
   String linearFunction = '300.0 + ( 25.0 * t )';
   String quadraticFunction = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
   String cubeFunction = '300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )';
