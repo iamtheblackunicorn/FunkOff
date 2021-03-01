@@ -159,15 +159,12 @@ Licensed under the MIT license.
 */
 
 import 'package:funkoff/funkoff.dart'; // If you want to use the engine itself, use this!
-import 'package:funkoff/linearFunctions.dart'; // If you want to use linear functions, import this!
-import 'package:funkoff/quadraticFunctions.dart'; // If you want to use quadratic functions, import this!
-import 'package:funkoff/cubeFunctions.dart'; // If you want to use cube functions, import this!
 
-void main(){
-
+void main() {
   String linearFunction = '300.0 + ( 25.0 * t )';
   String quadraticFunction = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
-  String cubeFunction = '300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )';
+  String cubeFunction =
+      '300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )';
   List<double> testSet = [4.5, 4.6, 4.7, 4.8];
   double testX = 2;
 
@@ -189,18 +186,19 @@ void main(){
   print(irParser(cubeFunction));
   makeVisualTree(cubeFunction);
 
-  print(computeLinear(linearFunction,testX));
-  print(computeQuadratic(quadraticFunction,testX));
-  print(computeCube(cubeFunction,testX));
+  print(computeLinear(linearFunction, testX));
+  print(computeQuadratic(quadraticFunction, testX));
+  print(computeCube(cubeFunction, testX));
 
-  print(computeLinearSet(linearFunction,testSet));
-  print(computeQuadraticSet(quadraticFunction,testSet));
-  print(computeCubeSet(cubeFunction,testSet));
+  print(computeLinearSet(linearFunction, testSet));
+  print(computeQuadraticSet(quadraticFunction, testSet));
+  print(computeCubeSet(cubeFunction, testSet));
 
   testEngine();
   testCubes();
   testQuadratics();
   testLinears();
+  testShellFunctions();
 }
 ```
 ## Note :scroll:
