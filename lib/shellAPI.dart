@@ -7,26 +7,28 @@ import 'linearFunctions.dart';
 /// This function evaluates yValues from given user input
 /// of the form [formula=>dataset].
 String evaluateIO(String userInput){
-  String formula = userInput.split('=>')[0];
-  List<String> stringDataSet = userInput.split('=>')[1].split(' ');
-  List<double> dataSet = [];
   String result = 'NONE';
-  for (int i = 0; i < stringDataSet.length; i++){
-    dataSet.add(double.tryParse(stringDataSet[i]));
-  }
-  if (astParser(formula) == 'LINEAR_FUNCTION'){
-    List<double> yValues = computeLinearSet(formula, dataSet);
-    result = yValues.join(' ');
-  }
-  else if (astParser(formula) == 'QUADRATIC_FUNCTION'){
-    List<double> yValues = computeQuadraticSet(formula, dataSet);
-    result = yValues.join(' ');
-  }
-  else if (astParser(formula) == 'CUBE_FUNCTION'){
-    List<double> yValues = computeCubeSet(formula, dataSet);
-    result = yValues.join(' ');
-  }
-  else {}
+  try {
+    String formula = userInput.split('=>')[0];
+    List<String> stringDataSet = userInput.split('=>')[1].split(' ');
+    List<double> dataSet = [];
+    for (int i = 0; i < stringDataSet.length; i++){
+      dataSet.add(double.tryParse(stringDataSet[i]));
+    }
+    if (astParser(formula) == 'LINEAR_FUNCTION'){
+      List<double> yValues = computeLinearSet(formula, dataSet);
+      result = yValues.join(' ');
+    }
+    else if (astParser(formula) == 'QUADRATIC_FUNCTION'){
+      List<double> yValues = computeQuadraticSet(formula, dataSet);
+      result = yValues.join(' ');
+    }
+    else if (astParser(formula) == 'CUBE_FUNCTION'){
+      List<double> yValues = computeCubeSet(formula, dataSet);
+      result = yValues.join(' ');
+    }
+    else {}
+  } catch (e) {}
   return result;
 }
 
