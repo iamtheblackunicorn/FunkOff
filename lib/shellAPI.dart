@@ -55,3 +55,15 @@ void functionsShell(){
     }
   }
 }
+
+/// Tests all of the above!
+void testShellFunctions(){
+  print(evaluateIO('300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6'));
+  print(evaluateIO('300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6'));
+  print(evaluateIO('300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6'));
+  print(evaluateIO('=>'));
+
+  print(checkInput('300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6'));
+  print(checkInput('300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6'));
+  print(checkInput('300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6'));
+}

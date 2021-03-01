@@ -24,11 +24,6 @@ Licensed under the MIT license.
 */
 
 import 'package:funkoff/funkoff.dart'; // If you want to use the engine itself, use this!
-import 'package:funkoff/linearFunctions.dart'; // If you want to use linear functions, import this!
-import 'package:funkoff/quadraticFunctions.dart'; // If you want to use quadratic functions, import this!
-import 'package:funkoff/cubeFunctions.dart'; // If you want to use cube functions, import this!
-
-void main(){
 
   String linearFunction = '300.0 + ( 25.0 * t )';
   String quadraticFunction = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
@@ -66,5 +61,6 @@ void main(){
   testCubes();
   testQuadratics();
   testLinears();
+  testShellFunctions();
 }
 ```

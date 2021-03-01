@@ -1,4 +1,4 @@
-import 'package:funkoff/shellAPI.dart';
+import 'package:funkoff/funkoff.dart';
 
 void main(){
   functionsShell();
