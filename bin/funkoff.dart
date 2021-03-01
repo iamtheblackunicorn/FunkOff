@@ -1,5 +1,5 @@
 import 'package:funkoff/funkoff.dart';
 
-void main(){
+void main() {
   functionsShell();
 }
