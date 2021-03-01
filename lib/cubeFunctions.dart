@@ -1,4 +1,4 @@
-import 'funkoff.dart';
+import 'coreEngine.dart';
 import 'dart:math';
 
 /// Computes Y from a given X and function formula

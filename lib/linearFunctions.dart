@@ -1,4 +1,4 @@
-import 'funkoff.dart';
+import 'coreEngine.dart';
 
 /// Computes Y from a given X and function formula
 /// and returns it as a double for linear functions.

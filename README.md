@@ -28,7 +28,7 @@ depdencies:
 ```YAML
 depdencies:
   ...
-  funkoff: ^1.0.0
+  funkoff: ^1.1.0
 ```
 
 The three dots represent anything else that you might have in the `dependencies` section. Having done that, re-fetch your project's dependencies by running this in the project's root directory:
@@ -45,24 +45,6 @@ Import the engine-API like this:
 
 ```dart
 import 'package:funkoff/funkoff.dart';
-```
-
-Import the API for linear functions like this:
-
-```dart
-import 'package:funkoff/linearFunctions.dart';
-```
-
-Import the API for quadratic functions like this:
-
-```dart
-import 'package:funkoff/quadraticFunctions.dart';
-```
-
-Import the API for cube functions like this:
-
-```dart
-import 'package:funkoff/cubeFunctions.dart';
 ```
 
 ### API
@@ -128,6 +110,35 @@ Computes Ys from a given Xs and function formula and returns it as a List of dou
 
 ##### void testCubes()
 Tests the above methods for cubic functions.
+
+#### Shell API
+
+##### String evaluateIO(String userInput)
+This function evaluates yValues from given user input of the form `formula=>dataset`.
+
+##### bool checkInput(String userInput)
+This function check whether the shell input is valid!
+
+##### void functionsShell()
+Provides a small shell for testing functions and datasets!
+
+#### Shell
+
+*FunkOff* now has a shell in which you can test functions.
+Call it by typing this command `funkoff`.
+
+You can get given Y-values from X-values like this:
+
+```text
+# Linear functions
+300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6
+
+# Quadratic functions
+300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
+
+# Cube functions
+300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
+```
 
 ## Example :calling:
 
