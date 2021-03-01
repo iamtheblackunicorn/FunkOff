@@ -25,7 +25,9 @@ String evaluateIO(String userInput) {
       List<double> yValues = computeCubeSet(formula, dataSet);
       result = yValues.join(' ');
     } else {}
-  } catch (e) {}
+  } catch (e) {
+    result = 'NONE';
+  }
   return result;
 }
 
@@ -54,6 +56,20 @@ void functionsShell() {
       print('Syntax error!');
     }
   }
+}
+
+/// This function processes a script with the ending *.fs.
+void evaluateScript(String fileName){
+  RegExp fileRegex = RegExp(r'.*\.fs');
+  if (fileRegex.hasMatch(fileName) == true){
+    List<String> contentList = File(fileName).readAsStringSync().split('\n');
+    for (int i = 0; i < contentList.length; i++){
+      print(evaluateIO(contentList[i]));
+    }
+  } else {
+    print('No valid file supplied!');
+  }
+
 }
 
 /// Tests all of the above!

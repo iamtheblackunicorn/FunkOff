@@ -28,7 +28,7 @@ depdencies:
 ```YAML
 depdencies:
   ...
-  funkoff: ^1.1.0
+  funkoff: ^1.1.1
 ```
 
 ### Using the binary
@@ -69,7 +69,7 @@ This method returns the AST patterns needed for matching formulas.
 Returns a map of the non-essential parser elements.
 
 ##### List<dynamic> patternParser(String formula)
-Generates a list of the schema `TOKEN_TYPE, TOKEN and returns it.
+Generates a list of the schema `TOKEN_TYPE, TOKEN` and returns it.
 
 ##### String astParser(String formula)
 Returns which type of function is being fed in as a string.
@@ -130,10 +130,13 @@ This function check whether the shell input is valid!
 ##### void functionsShell()
 Provides a small shell for testing functions and datasets!
 
+##### evaluateScript(String fileName)
+This function processes a script with the ending `*.fs`.
+
 #### Shell
 
-*FunkOff* now has a shell in which you can test functions.
-Call it by typing this command `funkoff`.
+*Funk Off* now has a shell in which you can test functions.
+Call it by typing this command `funkoff shell`.
 
 You can get given Y-values from X-values like this:
 
@@ -145,6 +148,14 @@ You can get given Y-values from X-values like this:
 300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
 
 # Cube functions
+300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
+```
+
+Process a script by supplying it as a first argument (`example.fs`):
+
+```text
+300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6
+300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
 300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
 ```
 
@@ -199,6 +210,7 @@ void main() {
   testQuadratics();
   testLinears();
   testShellFunctions();
+  evaluateScript('test.fs');
 }
 ```
 ## Note :scroll:

@@ -64,5 +64,6 @@ void main() {
   testQuadratics();
   testLinears();
   testShellFunctions();
+  evaluateScript('test.fs');
 }
 ```

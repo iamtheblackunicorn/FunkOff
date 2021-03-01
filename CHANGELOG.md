@@ -9,3 +9,8 @@
 
 - added an API for evaluating functions and datasets in a shell
 - added a shell binary
+
+## Version 1.1.1: Scripting!
+
+- added a scripting engine
+- scripts with the right syntax and the extension `fs` can now be run with `funkoff`.
