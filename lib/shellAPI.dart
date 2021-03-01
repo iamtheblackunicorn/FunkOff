@@ -12,7 +12,7 @@ String evaluateIO(String userInput){
   List<double> dataSet = [];
   String result = 'NONE';
   for (int i = 0; i < stringDataSet.length; i++){
-    dataSet.add(double.parse(stringDataSet[i]));
+    dataSet.add(double.tryParse(stringDataSet[i]));
   }
   if (astParser(formula) == 'LINEAR_FUNCTION'){
     List<double> yValues = computeLinearSet(formula, dataSet);
