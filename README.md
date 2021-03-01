@@ -31,6 +31,14 @@ depdencies:
   funkoff: ^1.1.0
 ```
 
+### Using the binary
+
+Run this command to install *Funk Off*:
+
+```bash
+$ dart pub global activate funkoff
+```
+
 The three dots represent anything else that you might have in the `dependencies` section. Having done that, re-fetch your project's dependencies by running this in the project's root directory:
 
 ```bash
