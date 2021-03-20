@@ -1,4 +1,4 @@
-export 'coreEngine.dart';
-export 'cubeFunctions.dart';
-export 'quadraticFunctions.dart';
-export 'linearFunctions.dart';
+export 'src/coreEngine.dart';
+export 'src/cubeFunctions.dart';
+export 'src/quadraticFunctions.dart';
+export 'src/linearFunctions.dart';
