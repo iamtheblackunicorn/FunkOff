@@ -43,6 +43,4 @@ void main() {
   testCubes();
   testQuadratics();
   testLinears();
-  testShellFunctions();
-  evaluateScript('test.fs');
 }

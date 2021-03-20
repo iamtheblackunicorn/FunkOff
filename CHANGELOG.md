@@ -14,3 +14,8 @@
 
 - added a scripting engine
 - scripts with the right syntax and the extension `fs` can now be run with `funkoff`.
+
+## Version 1.2.0-nullsafety.0: Null Safety
+
+- made package null safe
+- minor fixes

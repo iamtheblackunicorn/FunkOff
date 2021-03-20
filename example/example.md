@@ -6,9 +6,10 @@
 name: test
 description: A test app for FunkOff!
 version: 1.0.0
+publish_to: none
 homepage: https://github.com/iamtheblackunicorn/FunkOff
 environment:
-  sdk: '>=2.10.0 <3.0.0'
+  sdk: '>=2.12.0 <3.0.0'
 dependencies:
   funkoff:
     git: git://github.com/iamtheblackunicorn/FunkOff.git

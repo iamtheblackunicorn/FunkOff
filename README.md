@@ -28,21 +28,7 @@ depdencies:
 ```YAML
 depdencies:
   ...
-  funkoff: ^1.1.1
-```
-
-### Using the binary
-
-Run this command to install *Funk Off*:
-
-```bash
-$ dart pub global activate funkoff
-```
-
-The three dots represent anything else that you might have in the `dependencies` section. Having done that, re-fetch your project's dependencies by running this in the project's root directory:
-
-```bash
-$ dart pub get
+  funkoff: ^1.2.0-nullsafety.0
 ```
 
 ## Usage :hammer:
@@ -119,100 +105,6 @@ Computes Ys from a given Xs and function formula and returns it as a List of dou
 ##### void testCubes()
 Tests the above methods for cubic functions.
 
-#### Shell API
-
-##### String evaluateIO(String userInput)
-This function evaluates yValues from given user input of the form `formula=>dataset`.
-
-##### bool checkInput(String userInput)
-This function check whether the shell input is valid!
-
-##### void functionsShell()
-Provides a small shell for testing functions and datasets!
-
-##### evaluateScript(String fileName)
-This function processes a script with the ending `*.fs`.
-
-#### Shell
-
-*Funk Off* now has a shell in which you can test functions.
-Call it by typing this command `funkoff shell`.
-
-You can get given Y-values from X-values like this:
-
-```text
-# Linear functions
-300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6
-
-# Quadratic functions
-300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
-
-# Cube functions
-300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
-```
-
-Process a script by supplying it as a first argument (`example.fs`):
-
-```text
-300.0 + ( 24.0 * a )=>4.2 3.2 4.5 4.6
-300.0 + ( 25.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
-300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )=>4.2 3.2 4.5 4.6
-```
-
-## Example :calling:
-
-This is what a minimal example using *Funk Off* would look like.
-
-```dart
-/*
-FUNK OFF by Alexander Abraham a.k.a. "The Black Unicorn".
-Licensed under the MIT license.
-*/
-
-import 'package:funkoff/funkoff.dart'; // If you want to use the engine itself, use this!
-
-void main() {
-  String linearFunction = '300.0 + ( 25.0 * t )';
-  String quadraticFunction = '300.0 + ( 25.0 * t * t ) + ( 24.0 * t )';
-  String cubeFunction =
-      '300.0 + ( 25.0 * t * t * t ) + ( 26.0 * t * t ) + ( 24.0 * t )';
-  List<double> testSet = [4.5, 4.6, 4.7, 4.8];
-  double testX = 2;
-
-  print(patternParser(linearFunction));
-  print(astParser(linearFunction));
-  print(statementLinter(linearFunction));
-  print(irParser(linearFunction));
-  makeVisualTree(linearFunction);
-
-  print(patternParser(quadraticFunction));
-  print(astParser(quadraticFunction));
-  print(statementLinter(quadraticFunction));
-  print(irParser(quadraticFunction));
-  makeVisualTree(quadraticFunction);
-
-  print(patternParser(cubeFunction));
-  print(astParser(cubeFunction));
-  print(statementLinter(cubeFunction));
-  print(irParser(cubeFunction));
-  makeVisualTree(cubeFunction);
-
-  print(computeLinear(linearFunction, testX));
-  print(computeQuadratic(quadraticFunction, testX));
-  print(computeCube(cubeFunction, testX));
-
-  print(computeLinearSet(linearFunction, testSet));
-  print(computeQuadraticSet(quadraticFunction, testSet));
-  print(computeCubeSet(cubeFunction, testSet));
-
-  testEngine();
-  testCubes();
-  testQuadratics();
-  testLinears();
-  testShellFunctions();
-  evaluateScript('test.fs');
-}
-```
 ## Note :scroll:
 
 - *Funk Off* by Alexander Abraham a.k.a. *The Black Unicorn*
