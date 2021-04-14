@@ -6,7 +6,7 @@
 
 ## About :books:
 
-The other day I wanted to compute a number of values for a function formula. I wondered how I could implement a function that handles cubes, squares and linear functions fed into the same as a string and produce a list of values as Ys from a given list of Xs. *Funk Off* is that library. It supports linear functions, quadratic functions and cubic functions!
+The other day I wanted to compute a number of values for a function formula. I wondered how I could implement a function that handles cubes, squares and linear functions fed into a code function as a string and produce a list of values as Ys from a given list of Xs. *Funk Off* is that library. It supports linear functions, quadratic functions, and cubic functions!
 
 ## Installation :inbox_tray:
 
@@ -43,5 +43,5 @@ import 'package:funkoff/funkoff.dart';
 
 ## Note :scroll:
 
-- *Funk Off* 📈 by Alexander Abraham 🖤 a.k.a. *The Black Unicorn* 🦄
-- licensed under the MIT license
+- *Funk Off :chart_with_upwards_trend:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
+- Licensed under the MIT license.
