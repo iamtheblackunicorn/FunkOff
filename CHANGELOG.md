@@ -24,3 +24,5 @@
 
 - updated docs
 - minor fixes
+
+## Version 1.4.0: The Milestone Release Update
