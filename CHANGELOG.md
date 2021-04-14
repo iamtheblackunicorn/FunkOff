@@ -26,3 +26,5 @@
 - minor fixes
 
 ## Version 1.4.0: The Milestone Release Update
+
+- no longer pre-release
