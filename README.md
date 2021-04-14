@@ -28,7 +28,7 @@ depdencies:
 ```YAML
 depdencies:
   ...
-  funkoff: ^1.3.0-nullsafety.0
+  funkoff: ^1.4.0
 ```
 
 ## Usage :hammer:
