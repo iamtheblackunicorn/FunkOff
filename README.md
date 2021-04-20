@@ -1,6 +1,6 @@
 # FUNK OFF :chart_with_upwards_trend:
 
-[![Build Status](https://travis-ci.com/iamtheblackunicorn/FunkOff.svg?branch=main)](https://travis-ci.com/iamtheblackunicorn/FunkOff)
+[![GitHub CI](https://github.com/iamtheblackunicorn/funkoff/actions/workflows/dart.yml/badge.svg)](https://github.com/iamtheblackunicorn/funkoff/actions)
 
 *An over-powered engine to evaluate mathematical graph functions.* :chart_with_upwards_trend:
 
